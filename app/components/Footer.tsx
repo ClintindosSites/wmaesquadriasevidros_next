@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="footer bg-zinc-900 text-zinc-200 mt-20">
-      <div className="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-10">
+      <div className="container max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-10">
         {/* LOGO + DESCRIÇÃO */}
         <div>
           <h2 className="text-white text-lg font-semibold">WMA Esquadrias</h2>
@@ -87,7 +87,7 @@ export default function Footer() {
 
       {/* BOTTOM BAR */}
       <div className="border-t border-zinc-800 mt-10">
-        <div className="max-w-7xl mx-auto px-4 py-4 text-xs text-zinc-500 flex flex-col md:flex-row justify-between gap-2">
+        <div className="container max-w-7xl mx-auto px-4 py-4 text-xs text-zinc-500 flex flex-col md:flex-row justify-between gap-2">
           <p>
             © {new Date().getFullYear()} WMA Esquadrias. Todos os direitos
             reservados.

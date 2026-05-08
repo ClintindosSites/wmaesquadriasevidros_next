@@ -39,7 +39,7 @@ export default function Header() {
           show ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between ">
+        <div className="max-w-7xl mx-auto flex items-center justify-between container">
           {/* LOGO */}
           <Link href="/" onClick={closeMenu}>
             <Image
