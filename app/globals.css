@@ -3,6 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --azul-primario: linear-gradient(
+    rgba(11, 37, 69, 0.92),
+    rgba(11, 37, 69, 0.92)
+  );
 }
 
 @theme inline {
@@ -23,4 +27,16 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+.header,
+.footer {
+  background: linear-gradient(rgba(11, 37, 69, 0.92), rgba(11, 37, 69, 0.92));
+}
+.header nav {
+  display: flex;
+  gap: 1.1rem;
+  text-transform: uppercase;
+}
+.footer {
+  background: linear-gradient(rgba(11, 37, 69, 0.92), rgba(11, 37, 69, 0.92));
 }
