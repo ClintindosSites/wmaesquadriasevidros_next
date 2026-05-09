@@ -7,119 +7,128 @@ import { useEffect, useRef, useState } from "react";
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [show, setShow] = useState(true);
+
   const lastScroll = useRef(0);
 
-  // Detecta scroll (some ao descer / aparece ao subir)
+  // HEADER APARECE AO SUBIR E SOME AO DESCER
   useEffect(() => {
     const handleScroll = () => {
-      const current = window.scrollY;
+      const currentScroll = window.scrollY;
 
-      if (current < 10) {
+      if (currentScroll < 20) {
         setShow(true);
-      } else if (current > lastScroll.current) {
+      } else if (currentScroll > lastScroll.current) {
         setShow(false);
       } else {
         setShow(true);
       }
 
-      lastScroll.current = current;
+      lastScroll.current = currentScroll;
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
-  const closeMenu = () => setOpen(false);
+  function closeMenu() {
+    setOpen(false);
+  }
 
   return (
     <>
       {/* HEADER */}
-      <header
-        className={`header fixed top-0 left-0 w-full z-50 bg-white shadow-md transition-transform duration-300 ${
-          show ? "translate-y-0" : "-translate-y-full"
-        }`}
-      >
-        <div className="max-w-7xl mx-auto flex items-center justify-between container">
+      <header className={`header ${show ? "header-show" : "header-hide"}`}>
+        <div className="container header-container">
           {/* LOGO */}
-          <Link href="/" onClick={closeMenu}>
+          <Link href="/" onClick={closeMenu} className="header-logo">
             <Image
               src="/icons/logo.png"
               alt="WMA Esquadrias e Vidros"
-              width={110}
-              height={60}
+              width={120}
+              height={70}
               priority
             />
           </Link>
 
-          {/* DESKTOP MENU */}
-          <nav className="hidden md:flex gap-6 text-sm font-medium">
-            <Link href="/esquadrias-de-aluminio/orcamento-esquadria-de-aluminio-linha-gold">
+          {/* MENU DESKTOP */}
+          <nav className="header-nav">
+            <Link href="/servicos/esquadrias-de-aluminio-linha-gold">
               Linha Gold
             </Link>
-            <Link href="/esquadrias-de-aluminio/orcamento-esquadria-de-aluminio-linha-suprema">
+
+            <Link href="/servicos/esquadrias-de-aluminio-linha-suprema">
               Linha Suprema
             </Link>
-            <Link href="/esquadrias-de-aluminio/orcamento-esquadria-de-aluminio-linha-25">
+
+            <Link href="/servicos/esquadrias-de-aluminio-linha-25">
               Linha 25
             </Link>
-            <Link href="/esquadrias-de-aluminio/orcamento-esquadria-de-aluminio-linha-42">
+
+            <Link href="/servicos/esquadrias-de-aluminio-linha-42">
               Linha 42
             </Link>
+
             <Link href="/porta-acm-sob-medida-em-bh-e-regiao">Porta ACM</Link>
+
             <Link href="/vidracaria">Vidraçaria</Link>
           </nav>
 
-          {/* HAMBURGUER */}
+          {/* BOTÃO MOBILE */}
           <button
-            className="md:hidden flex flex-col gap-1"
+            className="mobile-menu-btn"
             onClick={() => setOpen(true)}
+            aria-label="Abrir menu"
           >
-            <span className="w-6 h-0.5 bg-black"></span>
-            <span className="w-6 h-0.5 bg-black"></span>
-            <span className="w-6 h-0.5 bg-black"></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
         </div>
       </header>
 
       {/* OVERLAY */}
-      {open && (
-        <div className="fixed inset-0 bg-black/50 z-40" onClick={closeMenu} />
-      )}
+      <div
+        className={`mobile-overlay ${open ? "active" : ""}`}
+        onClick={closeMenu}
+      ></div>
 
       {/* SIDEBAR MOBILE */}
-      <aside
-        className={`fixed top-0 right-0 h-full w-72 bg-white z-50 shadow-lg transform transition-transform duration-300 ${
-          open ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <div className="p-5 flex flex-col gap-5 text-sm font-medium">
-          <button className="self-end text-xl" onClick={closeMenu}>
+      <aside className={`mobile-sidebar ${open ? "active" : ""}`}>
+        <div className="mobile-sidebar-top">
+          <Image src="/icons/logo.png" alt="Logo" width={110} height={60} />
+
+          <button onClick={closeMenu} className="close-sidebar">
             ✕
           </button>
+        </div>
 
+        <nav className="mobile-nav">
           <Link
-            href="/esquadrias-de-aluminio/orcamento-esquadria-de-aluminio-linha-gold"
+            href="/servicos/esquadrias-de-aluminio-linha-gold"
             onClick={closeMenu}
           >
             Linha Gold
           </Link>
 
           <Link
-            href="/esquadrias-de-aluminio/orcamento-esquadria-de-aluminio-linha-suprema"
+            href="/servicos/esquadrias-de-aluminio-linha-suprema"
             onClick={closeMenu}
           >
             Linha Suprema
           </Link>
 
           <Link
-            href="/esquadrias-de-aluminio/orcamento-esquadria-de-aluminio-linha-25"
+            href="/servicos/esquadrias-de-aluminio-linha-25"
             onClick={closeMenu}
           >
             Linha 25
           </Link>
 
           <Link
-            href="/esquadrias-de-aluminio/orcamento-esquadria-de-aluminio-linha-42"
+            href="/servicos/esquadrias-de-aluminio-linha-42"
             onClick={closeMenu}
           >
             Linha 42
@@ -132,7 +141,7 @@ export default function Header() {
           <Link href="/vidracaria" onClick={closeMenu}>
             Vidraçaria
           </Link>
-        </div>
+        </nav>
       </aside>
     </>
   );
