@@ -139,7 +139,7 @@ export default function Header() {
           </Link>
 
           <Link
-            href="/servicos/porta-acm-sob-medida-em-bh-e-reigao"
+            href="/servicos/porta-acm-sob-medida-em-bh-e-regiao"
             onClick={closeMenu}
           >
             Porta ACM
