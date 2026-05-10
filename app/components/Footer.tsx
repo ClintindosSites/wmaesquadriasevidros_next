@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { event } from "@/lib/gtag";
 
 export default function Footer() {
   const whatsappMessage = encodeURIComponent(
@@ -61,6 +64,47 @@ export default function Footer() {
             </li>
             <li>
               <Link href="/">Projetos personalizados</Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* SERVIÇOS */}
+        {/* REDES SOCIAIS */}
+        <div>
+          <h3 className="text-white font-medium mb-3">Redes Sociais</h3>
+          <ul className="space-y-2 text-sm text-zinc-400">
+            <li>
+              {" "}
+              <Link
+                href="https://www.instagram.com/wmaesquadriasevidros/"
+                target="_blank"
+                onClick={() =>
+                  event({
+                    action: "click_instagram",
+                    category: "Redes Sociais",
+                    label: "Instagram CTA Final",
+                    value: 1,
+                  })
+                }
+              >
+                Instagram
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://www.facebook.com/profile.php?id=61556980601180"
+                target="_blank"
+                onClick={() =>
+                  event({
+                    action: "click_facebook",
+                    category: "Redes Sociais",
+                    label: "Facebook CTA Final",
+                    value: 1,
+                  })
+                }
+              >
+                Facebook
+              </Link>
             </li>
           </ul>
         </div>

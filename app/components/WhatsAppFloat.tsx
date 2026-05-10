@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function WhatsappFloat() {
   const whatsappMessage = encodeURIComponent(
-    "Olá! Vim pelo site e gostaria de solicitar um orçamento."
+    "Olá! Vim pelo site e gostaria de solicitar um orçamento para esquadrias de alumínio."
   );
 
   return (

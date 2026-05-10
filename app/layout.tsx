@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Script from "next/script";
 import LocalBusinessSchema from "./components/LocalBusinessSchema";
+import WhatsappFloat from "./components/WhatsAppFloat";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -85,6 +86,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col font-sans">
         <Header /> {children}
         <Footer />
+        <WhatsappFloat />
         <LocalBusinessSchema />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-2S5S8CWBY1"

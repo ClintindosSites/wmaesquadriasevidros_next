@@ -93,7 +93,7 @@ export default function GaleriaObras() {
               })
             }
           >
-            Solicitar orçamento
+            Solicitar orçamento pelo Whatsapp
           </Link>
         </div>
       </div>

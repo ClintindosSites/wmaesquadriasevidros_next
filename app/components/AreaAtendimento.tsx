@@ -73,13 +73,13 @@ export default function AreaAtendimento() {
                 })
               }
             >
-              Solicitar orçamento
+              Solicitar orçamento pelo Whatsapp
             </Link>
 
             <Link
               href="https://maps.app.goo.gl/wzARj1abwbv4SCRF7"
               target="_blank"
-              className="saiba-mais"
+              className="cta-button"
               onClick={() =>
                 event({
                   action: "click_localizacao",
