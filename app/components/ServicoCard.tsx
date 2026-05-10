@@ -1,4 +1,8 @@
+"use client";
+
 import Link from "next/link";
+
+import { event } from "@/lib/gtag";
 
 interface ServicoProps {
   name: string;
@@ -21,23 +25,45 @@ export default function ServicoCard({
     <div className="servicos-card">
       <div
         className="servico-img"
-        style={{ backgroundImage: `url(${image})` }}
+        style={{
+          backgroundImage: `url(${image})`,
+        }}
       ></div>
 
       <div className="servico-text">
         <h3>{name}</h3>
+
         <p>{description}</p>
       </div>
 
       <div className="servicos-buttons">
-        <Link href={link} className="saiba-mais">
+        {/* SAIBA MAIS */}
+        <Link
+          href={link}
+          className="saiba-mais"
+          onClick={() =>
+            event({
+              action: "click_saiba_mais",
+              category: "Servicos",
+              label: name,
+            })
+          }
+        >
           Saiba Mais
         </Link>
 
+        {/* WHATSAPP */}
         <Link
-          href={`https://wa.me/55319982112125?text=${whatsappMessage}`}
+          href={`https://wa.me/5531982112125?text=${whatsappMessage}`}
           target="_blank"
           className="cta-button"
+          onClick={() =>
+            event({
+              action: "click_whatsapp",
+              category: "Contato",
+              label: name,
+            })
+          }
         >
           Solicitar Orçamento pelo WhatsApp
         </Link>

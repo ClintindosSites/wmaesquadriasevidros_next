@@ -1,7 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
+import { event } from "@/lib/gtag";
+
 export default function Sobre() {
+  const whatsappMessage = encodeURIComponent(
+    "Olá! Vim pelo site e gostaria de solicitar um orçamento."
+  );
+
   return (
     <section className="sobre">
       <div className="container sobre-container">
@@ -28,12 +36,29 @@ export default function Sobre() {
 
           <div className="sobre-diferenciais">
             <div>✔ Mais de 15 anos de experiência</div>
+
             <div>✔ Fabricação sob medida</div>
+
             <div>✔ Atendimento em BH e região metropolitana</div>
+
             <div>✔ Equipe especializada</div>
+
             <div>✔ Compromisso com prazo e acabamento</div>
           </div>
-          <Link href="#" className="saiba-mais">
+
+          <Link
+            href={`https://wa.me/5531998212125?text=${whatsappMessage}`}
+            target="_blank"
+            className="saiba-mais"
+            onClick={() =>
+              event({
+                action: "click_whatsapp_sobre",
+                category: "Contato",
+                label: "Sessão Sobre",
+                value: 1,
+              })
+            }
+          >
             Solicitar orçamento pelo WhatsApp
           </Link>
         </div>

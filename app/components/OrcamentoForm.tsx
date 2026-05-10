@@ -1,8 +1,15 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { event } from "@/lib/gtag";
 
-export default function OrcamentoForm() {
+interface OrcamentoFormProps {
+  title?: string;
+}
+
+export default function OrcamentoForm({
+  title = "Orçamento Geral",
+}: OrcamentoFormProps) {
   const [nome, setNome] = useState("");
   const [endereco, setEndereco] = useState("");
   const [mensagem, setMensagem] = useState("");
@@ -11,7 +18,7 @@ export default function OrcamentoForm() {
     e.preventDefault();
 
     const texto = `
-Olá! Gostaria de solicitar um orçamento.
+Olá! Gostaria de solicitar um orçamento para ${title}.
 
 Nome: ${nome}
 Local da obra: ${endereco}
@@ -20,7 +27,13 @@ Detalhes:
 ${mensagem}
     `;
 
-    const url = `https://wa.me/553135828296?text=${encodeURIComponent(texto)}`;
+    const url = `https://wa.me/5531982112125?text=${encodeURIComponent(texto)}`;
+
+    event({
+      action: "submit_form",
+      category: "Lead",
+      label: title,
+    });
 
     window.open(url, "_blank");
   }
@@ -77,8 +90,8 @@ ${mensagem}
       </form>
 
       <div className="orcamento-form__footer">
-        <span> Resposta rápida</span>
-        <span> Atendimento em BH e região</span>
+        <span>Resposta rápida</span>
+        <span>Atendimento em BH e região</span>
       </div>
     </div>
   );

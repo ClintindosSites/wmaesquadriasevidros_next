@@ -1,5 +1,7 @@
 "use client";
 
+import { event } from "@/lib/gtag";
+
 import { ServiceData } from "@/types/service";
 
 interface ServiceCTAProps {
@@ -27,12 +29,17 @@ export default function ServiceCTA({ service }: ServiceCTAProps) {
           <p>{service.ctaDescription}</p>
 
           <a
-            href={`https://wa.me/5531992799772?text=${encodeURIComponent(
-              whatsappMessage
-            )}`}
+            href={`https://wa.me/5531982112125?text=${encodeURIComponent(whatsappMessage)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="cta-button"
+            onClick={() =>
+              event({
+                action: "click_whatsapp",
+                category: "Contato",
+                label: `CTA Final - ${service.title}`,
+              })
+            }
           >
             Solicitar orçamento no WhatsApp
           </a>

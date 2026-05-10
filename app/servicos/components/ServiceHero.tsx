@@ -2,36 +2,45 @@
 
 import Link from "next/link";
 
+import { event } from "@/lib/gtag";
+
 export default function ServiceHero({ service }: any) {
+  const whatsappMessage = encodeURIComponent(
+    `Olá, vim pelo site e gostaria de realizar um orçamento de ${service.title}.`
+  );
+
   return (
     <section className="hero service-hero">
-      {/* 🔥 BACKGROUND DINÂMICO */}
-      {service.heroVideo ? (
-        <video className="hero-bg" autoPlay loop muted playsInline>
-          <source src={service.heroVideo} type="video/mp4" />
-        </video>
-      ) : (
-        <div
-          className="hero-bg"
-          style={{
-            background: `url(${service.heroImage}) center/cover no-repeat`,
-            backgroundAttachment: "fixed",
-          }}
-        />
-      )}
+      {/* BACKGROUND */}
+      <div
+        className="hero-bg"
+        style={{
+          background: `url(${service.heroImage}) center/cover no-repeat`,
+          backgroundAttachment: "fixed",
+        }}
+      />
 
-      {/* overlay */}
+      {/* OVERLAY */}
       <div className="overlay" />
 
-      {/* conteúdo */}
-      <div className="hero-content">
+      {/* CONTEÚDO */}
+      <div className="hero-content container">
         <h1>{service.subtitle}</h1>
+
         <p>{service.description}</p>
 
         <Link
-          href={`https://wa.me/5531992799772?text=Olá, vim pelo site e gostaria de realizar um orçamento de ${service.title}`}
+          href={`https://wa.me/5531982112125?text=${whatsappMessage}`}
           className="cta-button"
           target="_blank"
+          onClick={() =>
+            event({
+              action: "click_whatsapp_service_hero",
+              category: "Contato",
+              label: service.title,
+              value: 1,
+            })
+          }
         >
           Solicitar Orçamento no WhatsApp
         </Link>

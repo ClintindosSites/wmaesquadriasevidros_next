@@ -9,7 +9,8 @@ import "swiper/css";
 import { Scrollbar } from "swiper/modules";
 
 import "swiper/css/scrollbar";
-import Link from "next/link";
+
+import { event } from "@/lib/gtag";
 
 interface Props {
   images?: string[];
@@ -35,13 +36,31 @@ export default function ServiceGallery({ images = [], title }: Props) {
             slidesPerView: 4,
           },
         }}
+        onSlideChange={swiper => {
+          event({
+            action: "gallery_slide_change",
+            category: "Galeria",
+            label: `${title} - Slide ${swiper.realIndex + 1}`,
+            value: swiper.realIndex + 1,
+          });
+        }}
       >
         {images.map((img: string, index: number) => (
           <SwiperSlide key={index}>
-            <div className="slide">
+            <div
+              className="slide"
+              onClick={() =>
+                event({
+                  action: "click_gallery_image",
+                  category: "Galeria",
+                  label: `${title} - Imagem ${index + 1}`,
+                  value: index + 1,
+                })
+              }
+            >
               <Image
                 src={img}
-                alt={title}
+                alt={`${title} - Projeto ${index + 1}`}
                 fill
                 sizes="(max-width: 1200px) 100vw, 35vw"
                 style={{

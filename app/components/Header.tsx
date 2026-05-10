@@ -71,9 +71,13 @@ export default function Header() {
               Linha 42
             </Link>
 
-            <Link href="/porta-acm-sob-medida-em-bh-e-regiao">Porta ACM</Link>
+            <Link href="/servicos/porta-acm-sob-medida-em-bh-e-regiao">
+              Porta ACM
+            </Link>
 
-            <Link href="/vidracaria">Vidraçaria</Link>
+            <Link href="/servicos/vidracaria-em-belo-horizonte">
+              Vidraçaria
+            </Link>
           </nav>
 
           {/* BOTÃO MOBILE */}
@@ -134,11 +138,17 @@ export default function Header() {
             Linha 42
           </Link>
 
-          <Link href="/porta-acm-sob-medida-em-bh-e-regiao" onClick={closeMenu}>
+          <Link
+            href="/servicos/porta-acm-sob-medida-em-bh-e-reigao"
+            onClick={closeMenu}
+          >
             Porta ACM
           </Link>
 
-          <Link href="/vidracaria" onClick={closeMenu}>
+          <Link
+            href="/servicos/vidracaria-em-belo-horizonte"
+            onClick={closeMenu}
+          >
             Vidraçaria
           </Link>
         </nav>

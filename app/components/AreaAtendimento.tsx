@@ -1,6 +1,14 @@
+"use client";
+
 import Link from "next/link";
 
+import { event } from "@/lib/gtag";
+
 export default function AreaAtendimento() {
+  const whatsappMessage = encodeURIComponent(
+    "Olá! Vim pelo site e gostaria de solicitar um orçamento para esquadrias de alumínio."
+  );
+
   return (
     <section className="area-atendimento">
       <div className="container area-container">
@@ -10,9 +18,7 @@ export default function AreaAtendimento() {
             Atendimento em Belo Horizonte e região
           </span>
 
-          <h2>
-            Atendemos Contagem, Belo Horizonte e toda região metropolitana
-          </h2>
+          <h2>Atendemos Belo Horizonte e toda região metropolitana</h2>
 
           <p>
             A WMA Esquadrias e Vidros realiza projetos sob medida em alumínio e
@@ -28,25 +34,44 @@ export default function AreaAtendimento() {
           {/* CIDADES */}
           <div className="area-cidades">
             <span>Belo Horizonte</span>
+
             <span>Contagem</span>
+
             <span>Nova Lima</span>
+
             <span>Betim</span>
+
             <span>Lagoa Santa</span>
+
             <span>Santa Luzia</span>
+
             <span>Vespasiano</span>
+
             <span>Matozinhos</span>
+
             <span>Pedro Leopoldo</span>
+
             <span>Sabará</span>
+
             <span>Ribeirão das Neves</span>
+
             <span>Grande BH e Região Metropolitana</span>
           </div>
 
           {/* CTA */}
           <div className="area-buttons">
             <Link
-              href="https://wa.me/553135828296"
+              href={`https://wa.me/5531982112125?text=${whatsappMessage}`}
               target="_blank"
               className="cta-button"
+              onClick={() =>
+                event({
+                  action: "click_whatsapp_area_atendimento",
+                  category: "Contato",
+                  label: "Área de Atendimento",
+                  value: 1,
+                })
+              }
             >
               Solicitar orçamento
             </Link>
@@ -55,6 +80,14 @@ export default function AreaAtendimento() {
               href="https://maps.app.goo.gl/wzARj1abwbv4SCRF7"
               target="_blank"
               className="saiba-mais"
+              onClick={() =>
+                event({
+                  action: "click_localizacao",
+                  category: "Mapa",
+                  label: "Google Maps",
+                  value: 1,
+                })
+              }
             >
               Ver localização
             </Link>

@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+
+import { event } from "@/lib/gtag";
 
 const imagens = [
   "/images/obra-1.webp",
@@ -10,6 +14,10 @@ const imagens = [
 ];
 
 export default function GaleriaObras() {
+  const whatsappMessage = encodeURIComponent(
+    "Olá! Vim pelo site e gostaria de solicitar um orçamento."
+  );
+
   return (
     <section className="galeria">
       <div className="container">
@@ -28,7 +36,7 @@ export default function GaleriaObras() {
           <div className="galeria-item destaque">
             <Image
               src={imagens[0]}
-              alt="Projeto WMA Esquadrias"
+              alt="Projeto de esquadrias e vidros da WMA"
               width={800}
               height={800}
             />
@@ -37,7 +45,7 @@ export default function GaleriaObras() {
           <div className="galeria-item">
             <Image
               src={imagens[1]}
-              alt="Projeto WMA Esquadrias"
+              alt="Projeto de esquadrias e vidros da WMA"
               width={400}
               height={400}
             />
@@ -46,7 +54,7 @@ export default function GaleriaObras() {
           <div className="galeria-item">
             <Image
               src={imagens[2]}
-              alt="Projeto WMA Esquadrias"
+              alt="Projeto de esquadrias e vidros da WMA"
               width={400}
               height={400}
             />
@@ -55,7 +63,7 @@ export default function GaleriaObras() {
           <div className="galeria-item">
             <Image
               src={imagens[3]}
-              alt="Projeto WMA Esquadrias"
+              alt="Projeto de esquadrias e vidros da WMA"
               width={400}
               height={400}
             />
@@ -64,7 +72,7 @@ export default function GaleriaObras() {
           <div className="galeria-item">
             <Image
               src={imagens[4]}
-              alt="Projeto WMA Esquadrias"
+              alt="Projeto de esquadrias e vidros da WMA"
               width={400}
               height={400}
             />
@@ -74,8 +82,16 @@ export default function GaleriaObras() {
         <div className="galeria-cta">
           <Link
             className="cta-button"
-            href="https://wa.me/553135828296"
+            href={`https://wa.me/5531982112125?text=${whatsappMessage}`}
             target="_blank"
+            onClick={() =>
+              event({
+                action: "click_whatsapp_galeria",
+                category: "Contato",
+                label: "Galeria de Obras",
+                value: 1,
+              })
+            }
           >
             Solicitar orçamento
           </Link>

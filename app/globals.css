@@ -31,13 +31,6 @@
   );
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #ededed;
@@ -829,6 +822,7 @@ h3 {
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 24px;
+  width: fit-content;
 }
 
 .cta-content h2 {
@@ -973,6 +967,8 @@ textarea {
     display: flex;
     flex-direction: column;
     padding: 0;
+    justify-content: center;
+    align-items: center;
   }
   .hero-text p {
     display: none;
@@ -1026,6 +1022,59 @@ textarea {
   }
   .cta-final {
     padding: 80px 0;
+  }
+
+  .cta-bg {
+    background-position: center;
+    transform: scale(1);
+  }
+
+  .cta-overlay {
+    background: rgba(0, 0, 0, 0.82);
+  }
+
+  .cta-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cta-content {
+    text-align: left;
+  }
+
+  .cta-content h2 {
+    font-size: 34px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+
+  .cta-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+  }
+
+  .cta-buttons {
+    width: 100%;
+  }
+
+  .cta-buttons .cta-button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .cta-socials {
+    margin-top: 20px;
+  }
+
+  .cta-form {
+    width: 100%;
+  }
+
+  .cta-form .orcamento-form {
+    max-width: 100%;
+    padding: 24px;
   }
 
   .cta-content h2 {
@@ -1189,13 +1238,23 @@ textarea {
 .cta-bg {
   position: absolute;
   inset: 0;
+
   width: 100%;
   height: 100%;
-  object-fit: cover;
+
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+
+  object-fit: cover;
 }
 
+/* Apenas desktop */
+@media (min-width: 1024px) {
+  .cta-bg {
+    background-attachment: fixed;
+  }
+}
 .service-cta::before {
   content: "";
   position: absolute;

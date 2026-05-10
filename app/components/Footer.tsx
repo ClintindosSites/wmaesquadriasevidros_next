@@ -1,6 +1,9 @@
 import Link from "next/link";
 
 export default function Footer() {
+  const whatsappMessage = encodeURIComponent(
+    "Olá, vim pelo site e gostária de um orçamento de esquadrias de alumínio"
+  );
   return (
     <footer className="footer bg-zinc-900 text-zinc-200 mt-20">
       <div className="container max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-10">
@@ -19,22 +22,22 @@ export default function Footer() {
           <h3 className="text-white font-medium mb-3">Esquadrias</h3>
           <ul className="space-y-2 text-sm text-zinc-400">
             <li>
-              <Link href="/esquadrias-de-aluminio/orcamento-esquadria-de-aluminio-linha-gold">
+              <Link href="/servicos/esquadrias-de-aluminio-linha-gold">
                 Linha Gold
               </Link>
             </li>
             <li>
-              <Link href="/esquadrias-de-aluminio/orcamento-esquadria-de-aluminio-linha-suprema">
+              <Link href="/servicos/esquadrias-de-aluminio-linha-suprema">
                 Linha Suprema
               </Link>
             </li>
             <li>
-              <Link href="/esquadrias-de-aluminio/orcamento-esquadria-de-aluminio-linha-25">
+              <Link href="/servicos/esquadrias-de-aluminio-linha-25">
                 Linha 25
               </Link>
             </li>
             <li>
-              <Link href="/esquadrias-de-aluminio/orcamento-esquadria-de-aluminio-linha-42">
+              <Link href="/servicos/esquadrias-de-aluminio-linha-42">
                 Linha 42
               </Link>
             </li>
@@ -72,15 +75,15 @@ export default function Footer() {
           </p>
 
           <a
-            href="https://wa.me/553135828296"
+            href={`https://wa.me/5531982112125?text=${whatsappMessage}`}
             target="_blank"
-            className="inline-block bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium transition"
+            className="cta-button"
           >
             Chamar no WhatsApp
           </a>
 
           <p className="text-xs text-zinc-500 mt-4">
-            Contagem • Belo Horizonte • Região Metropolitana
+            Belo Horizonte • Contagem • Região Metropolitana
           </p>
         </div>
       </div>

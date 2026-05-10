@@ -3,6 +3,8 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Script from "next/script";
+import LocalBusinessSchema from "./components/LocalBusinessSchema";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -11,44 +13,62 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "WMA Esquadrias de Alumínio e Vidros | Contagem e BH",
-    template: "%s | WMA Esquadrias",
-  },
-  description:
-    "Especialistas em esquadrias de alumínio, janelas, portas, fachadas de vidro e projetos sob medida em Belo Horizonte, Contagem e região.",
-  keywords: [
-    "esquadrias de alumínio bh",
-    "esquadrias de aluminio perto de mim",
-    "esquadrias bh",
-    "janelas de alumínio",
-    "serralheria de alumínio perto de mim",
-    "serralheria de alumínio em bh",
-    "esquadrias de alumínio linha gold",
-    "esquadrias de alumínio linha suprema",
-    "esquadrias de alumínio linha 25",
-    "esquadrias de alumínio linha 42",
-    "fabricação de portas acm",
-    "esquadrias sob medida",
-  ],
-  authors: [{ name: "WMA Esquadrias" }],
-  creator: "WMA Esquadrias",
   metadataBase: new URL("https://wmaesquadriasevidros.com.br"),
-  openGraph: {
-    title: "WMA Esquadrias de Alumínio e Vidros",
-    description:
-      "Soluções em esquadrias de alumínio e vidros sob medida em Contagem e Belo Horizonte.",
-    url: "https://wmaesquadriasevidros.com.br",
-    siteName: "WMA Esquadrias",
-    locale: "pt_BR",
-    type: "website",
+
+  title: {
+    default: "WMA Esquadrias e Vidros",
+    template: "%s | WMA Esquadrias e Vidros",
   },
+
+  description:
+    "Esquadrias de alumínio, portas ACM, vidraçaria e projetos sob medida em Belo Horizonte e região.",
+
+  keywords: [
+    "esquadrias de aluminio bh",
+    "porta acm",
+    "vidraçaria bh",
+    "janela de aluminio",
+    "blindex belo horizonte",
+  ],
+
+  openGraph: {
+    title: "WMA Esquadrias e Vidros",
+
+    description:
+      "Projetos modernos em alumínio e vidro com fabricação sob medida e instalação profissional.",
+
+    url: "https://wmaesquadriasevidros.com.br",
+
+    siteName: "WMA Esquadrias e Vidros",
+
+    locale: "pt_BR",
+
+    type: "website",
+
+    images: [
+      {
+        url: "/icons/logo-background-black.png",
+        width: 1200,
+        height: 630,
+        alt: "WMA Esquadrias e Vidros",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title: "WMA Esquadrias e Vidros",
+
+    description:
+      "Esquadrias modernas, portas ACM e vidraçaria premium em Belo Horizonte.",
+
+    images: ["/images/opengraph.jpg"],
+  },
+
   robots: {
     index: true,
     follow: true,
-  },
-  icons: {
-    icon: "/favicon.ico",
   },
 };
 export const viewport: Viewport = {
@@ -65,6 +85,28 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col font-sans">
         <Header /> {children}
         <Footer />
+        <LocalBusinessSchema />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-2S5S8CWBY1"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag(){
+      dataLayer.push(arguments);
+    }
+
+    window.gtag = gtag;
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-2S5S8CWBY1', {
+      page_path: window.location.pathname,
+    });
+  `}
+        </Script>
       </body>
     </html>
   );

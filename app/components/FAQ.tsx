@@ -2,32 +2,39 @@
 
 import { useState } from "react";
 
+import { event } from "@/lib/gtag";
+
 const faqItems = [
   {
     question: "Vocês fazem esquadrias de alumínio sob medida?",
     answer:
       "Sim. Todos os nossos projetos são fabricados sob medida de acordo com as necessidades do ambiente e do cliente.",
   },
+
   {
     question: "Quais cidades a WMA atende?",
     answer:
       "Atendemos Belo Horizonte, Contagem, Betim e toda região metropolitana com instalação profissional e acompanhamento completo.",
   },
+
   {
     question: "Vocês trabalham com vidro temperado e Blindex?",
     answer:
       "Sim. Trabalhamos com vidro temperado para fachadas, boxes, janelas, portas, guarda-corpo e diversos projetos personalizados.",
   },
+
   {
     question: "Qual a diferença entre Linha Gold, Suprema, 25 e 42?",
     answer:
       "Cada linha possui características específicas de acabamento, resistência e aplicação. Nossa equipe ajuda você a escolher a melhor opção para seu projeto.",
   },
+
   {
     question: "Vocês fazem porta ACM sob medida?",
     answer:
       "Sim. Fabricamos portas ACM personalizadas com acabamento moderno, excelente durabilidade e visual sofisticado.",
   },
+
   {
     question: "O orçamento é gratuito?",
     answer:
@@ -38,8 +45,20 @@ const faqItems = [
 export default function FAQ() {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
-  function toggleFAQ(index: number) {
-    setActiveIndex(activeIndex === index ? null : index);
+  function toggleFAQ(index: number, question: string) {
+    const isOpening = activeIndex !== index;
+
+    setActiveIndex(isOpening ? index : null);
+
+    // TRACKING
+    if (isOpening) {
+      event({
+        action: "open_faq",
+        category: "FAQ",
+        label: question,
+        value: 1,
+      });
+    }
   }
 
   return (
@@ -64,7 +83,10 @@ export default function FAQ() {
               key={index}
               className={`faq-item ${activeIndex === index ? "active" : ""}`}
             >
-              <button className="faq-question" onClick={() => toggleFAQ(index)}>
+              <button
+                className="faq-question"
+                onClick={() => toggleFAQ(index, item.question)}
+              >
                 <span>{item.question}</span>
 
                 <span className="faq-icon">
