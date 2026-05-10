@@ -30,9 +30,9 @@ export const services: ServiceData[] = [
     description:
       "A Linha Gold é ideal para projetos modernos que exigem sofisticação, resistência e acabamento profissional.",
 
-    heroImage: "/images/banner-hero.png",
+    heroImage: "/images/linha-gold-bg.webp",
 
-    ctaImage: "/images/banner-hero.png",
+    ctaImage: "/images/linha-gold-bg.webp",
 
     gallery: [
       "/images/obra-1.webp",
@@ -138,9 +138,9 @@ export const services: ServiceData[] = [
     description:
       "A Linha Suprema é uma das linhas de esquadrias de alumínio mais procuradas para projetos residenciais e comerciais modernos, oferecendo excelente vedação, estética sofisticada e ótimo custo-benefício.",
 
-    heroImage: "/images/banner-hero.png",
+    heroImage: "/images/linha-suprema-bg.webp",
 
-    ctaImage: "/images/banner-hero.png",
+    ctaImage: "/images/linha-suprema-bg.webp",
 
     gallery: [
       "/images/obra-1.webp",
@@ -276,9 +276,9 @@ export const services: ServiceData[] = [
     description:
       "A Linha 25 é uma das opções mais procuradas para projetos residenciais e comerciais por unir beleza, funcionalidade e ótimo custo-benefício.",
 
-    heroImage: "/images/banner-hero.png",
+    heroImage: "/images/linha-25-bg.webp",
 
-    ctaImage: "/images/banner-hero.png",
+    ctaImage: "/images/linha-25-bg.webp",
 
     gallery: [
       "/images/obra-1.webp",
@@ -419,9 +419,9 @@ export const services: ServiceData[] = [
     description:
       "A Linha 42 é ideal para projetos modernos que exigem maior resistência estrutural, excelente acabamento e máxima valorização estética.",
 
-    heroImage: "/images/banner-hero.png",
+    heroImage: "/images/linha-42-bg.webp",
 
-    ctaImage: "/images/banner-hero.png",
+    ctaImage: "/images/linha-42-bg.png",
 
     gallery: [
       "/images/obra-1.webp",
@@ -562,9 +562,9 @@ export const services: ServiceData[] = [
     description:
       "As portas ACM são ideais para quem busca sofisticação, modernidade e durabilidade na entrada de residências e estabelecimentos comerciais.",
 
-    heroImage: "/images/porta-acm-1.webp",
+    heroImage: "/images/porta-acm-bg.webp",
 
-    ctaImage: "/images/porta-acm-10.webp",
+    ctaImage: "/images/porta-acm-bg.webp",
 
     gallery: [
       "/images/porta-acm-1.webp",
@@ -711,9 +711,9 @@ export const services: ServiceData[] = [
     description:
       "Trabalhamos com projetos completos de vidraçaria em Belo Horizonte, oferecendo soluções modernas, seguras e sofisticadas para residências e comércios.",
 
-    heroImage: "/images/vidro-temperado-laminado.png",
+    heroImage: "/images/blindex-bg.webp",
 
-    ctaImage: "/images/fachadas-e-vidros-de-aluminio.png",
+    ctaImage: "/images/blindex-bg.webp",
 
     gallery: [
       "/images/obra-1.webp",

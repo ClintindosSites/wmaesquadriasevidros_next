@@ -66,7 +66,7 @@ export default function Sobre() {
         {/* IMAGEM */}
         <div className="sobre-image">
           <Image
-            src="/images/esquadria-sob-medida.png"
+            src="/images/esquadria-sob-medida.webp"
             alt="Projeto de esquadrias de alumínio da WMA"
             width={700}
             height={700}

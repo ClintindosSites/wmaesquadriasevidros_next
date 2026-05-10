@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/icons/logo-background-black.png",
+        url: "/icons/logo-background-black.webp",
         width: 1200,
         height: 630,
         alt: "WMA Esquadrias e Vidros",

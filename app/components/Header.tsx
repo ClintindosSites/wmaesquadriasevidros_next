@@ -45,7 +45,7 @@ export default function Header() {
           {/* LOGO */}
           <Link href="/" onClick={closeMenu} className="header-logo">
             <Image
-              src="/icons/logo.png"
+              src="/icons/logo.webp"
               alt="WMA Esquadrias e Vidros"
               width={120}
               height={70}
@@ -102,7 +102,7 @@ export default function Header() {
       {/* SIDEBAR MOBILE */}
       <aside className={`mobile-sidebar ${open ? "active" : ""}`}>
         <div className="mobile-sidebar-top">
-          <Image src="/icons/logo.png" alt="Logo" width={110} height={60} />
+          <Image src="/icons/logo.webp" alt="Logo" width={110} height={60} />
 
           <button onClick={closeMenu} className="close-sidebar">
             ✕

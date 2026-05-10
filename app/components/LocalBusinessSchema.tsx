@@ -6,7 +6,7 @@ export default function LocalBusinessSchema() {
 
     name: "WMA Esquadrias e Vidros",
 
-    image: "https://wmaesquadriasevidros.com.br/icons/logo-background.png",
+    image: "https://wmaesquadriasevidros.com.br/icons/logo-background.webp",
 
     telephone: "+55 31 3582-8296",
 

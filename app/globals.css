@@ -306,7 +306,7 @@ h3 {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: url("/images/banner-hero.png") center/cover no-repeat;
+  background: url("/images/banner-hero.webp") center/cover no-repeat;
   background-attachment: fixed;
   padding: 120px 24px 60px;
   position: relative;
