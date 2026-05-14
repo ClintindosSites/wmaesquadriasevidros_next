@@ -36,14 +36,6 @@ export default function ServiceGallery({ images = [], title }: Props) {
             slidesPerView: 4,
           },
         }}
-        onSlideChange={swiper => {
-          event({
-            action: "gallery_slide_change",
-            category: "Galeria",
-            label: `${title} - Slide ${swiper.realIndex + 1}`,
-            value: swiper.realIndex + 1,
-          });
-        }}
       >
         {images.map((img: string, index: number) => (
           <SwiperSlide key={index}>

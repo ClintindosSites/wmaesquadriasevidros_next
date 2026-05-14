@@ -1,28 +1,28 @@
 export const GA_TRACKING_ID = "G-2S5S8CWBY1";
 
+type EventProps = {
+  action: string;
+  category?: string;
+  label?: string;
+  value?: number;
+};
+
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
+    gtag?: (...args: any[]) => void;
   }
 }
 
-export const pageview = (url: string) => {
-  window.gtag("config", GA_TRACKING_ID, {
-    page_path: url,
-  });
-};
+export const event = ({ action, category, label, value }: EventProps) => {
+  // 🔥 impede quebra do site
+  if (typeof window === "undefined") return;
 
-export const event = ({
-  action,
-  category,
-  label,
-  value,
-}: {
-  action: string;
-  category: string;
-  label: string;
-  value?: number;
-}) => {
+  // 🔥 impede erro se gtag não carregou
+  if (typeof window.gtag !== "function") {
+    console.warn("gtag ainda não carregou");
+    return;
+  }
+
   window.gtag("event", action, {
     event_category: category,
     event_label: label,

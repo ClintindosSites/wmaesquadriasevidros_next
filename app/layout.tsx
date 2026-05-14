@@ -84,29 +84,22 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${poppins.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans">
-        <Header /> {children}
+        <Header />
+        {children}
         <Footer />
         <WhatsappFloat />
         <LocalBusinessSchema />
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-2S5S8CWBY1"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-2S5S8CWBY1`}
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
     window.dataLayer = window.dataLayer || [];
-
-    function gtag(){
-      dataLayer.push(arguments);
-    }
-
+    function gtag(){dataLayer.push(arguments);}
     window.gtag = gtag;
-
     gtag('js', new Date());
-
-    gtag('config', 'G-2S5S8CWBY1', {
-      page_path: window.location.pathname,
-    });
+    gtag('config', 'G-2S5S8CWBY1');
   `}
         </Script>
       </body>
