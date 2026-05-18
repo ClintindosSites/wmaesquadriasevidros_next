@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-
 import ServiceGallery from "./ServiceGallery";
 import ServiceBenefits from "./ServiceBenefits";
 
@@ -27,12 +25,14 @@ export default function ServiceDetails({ service }: { service: Service }) {
 
   return (
     <section className="service-details">
+      {/* BENEFÍCIOS */}
+      {service.benefits && <ServiceBenefits service={service} />}
       <div className="container">
         {/* GRID PRINCIPAL */}
         <div className="details-grid">
           {/* TEXO */}
           <div className="details-text">
-            <h2>Detalhes sobre {service.title}</h2>
+            <h2>Confira Obras realizadas em {service.title}</h2>
 
             <p>{service.longDescription}</p>
           </div>
@@ -43,7 +43,7 @@ export default function ServiceDetails({ service }: { service: Service }) {
           </div>
 
           {/* CTA */}
-          <Link
+          <a
             href={`https://wa.me/5531982112125?text=${whatsappMessage}`}
             className="cta-button"
             target="_blank"
@@ -57,11 +57,8 @@ export default function ServiceDetails({ service }: { service: Service }) {
             }
           >
             Solicitar Orçamento no WhatsApp
-          </Link>
+          </a>
         </div>
-
-        {/* BENEFÍCIOS */}
-        {service.benefits && <ServiceBenefits service={service} />}
       </div>
     </section>
   );

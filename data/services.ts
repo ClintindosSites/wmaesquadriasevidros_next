@@ -6,7 +6,7 @@ export const services: ServiceData[] = [
   {
     slug: "esquadrias-de-aluminio-linha-gold",
 
-    title: "Esquadrias de Alumínio Linha Gold em Belo Horizonte",
+    title: "Esquadrias de Alumínio Linha Gold",
 
     metaDescription:
       "Linha Gold de esquadrias de alumínio sob medida em Belo Horizonte com acabamento premium, excelente vedação e instalação profissional.",
@@ -47,7 +47,27 @@ export const services: ServiceData[] = [
     whatsappMessage:
       "Olá! Gostaria de solicitar um orçamento para esquadrias Linha Gold.",
 
-    cities: ["Belo Horizonte", "Contagem", "Betim", "Nova Lima"],
+    cities: [
+      "Belo Horizonte",
+      "Contagem",
+      "Betim",
+      "Nova Lima",
+      "Lagoa Santa",
+      "Caeté",
+      "Sabará",
+      "Brumadinho",
+      "Raposos",
+      "Santa Luzia",
+      "Vespasiano0",
+      "Pedro Leopoldo",
+      "Matozinhos",
+      "Confins",
+      "Mateus Leme",
+      "Ribeirão das Neves",
+      "Ibirité",
+      "Igarapé",
+      "Sarzedo",
+    ],
 
     reviews: [
       {
@@ -111,7 +131,7 @@ export const services: ServiceData[] = [
   {
     slug: "esquadrias-de-aluminio-linha-suprema",
 
-    title: "Esquadrias de Alumínio Linha Suprema em Belo Horizonte",
+    title: "Esquadrias de alumínio Linha Suprema",
 
     metaDescription:
       "Esquadrias de Alumínio Linha Suprema sob medida em Belo Horizonte com visual moderno, excelente vedação, resistência e acabamento premium para projetos sofisticados.",
@@ -155,7 +175,27 @@ export const services: ServiceData[] = [
     whatsappMessage:
       "Olá! Gostaria de solicitar um orçamento para esquadrias de alumínio Linha Suprema.",
 
-    cities: ["Belo Horizonte", "Contagem", "Betim", "Nova Lima", "Lagoa Santa"],
+    cities: [
+      "Belo Horizonte",
+      "Contagem",
+      "Betim",
+      "Nova Lima",
+      "Lagoa Santa",
+      "Caeté",
+      "Sabará",
+      "Brumadinho",
+      "Raposos",
+      "Santa Luzia",
+      "Vespasiano0",
+      "Pedro Leopoldo",
+      "Matozinhos",
+      "Confins",
+      "Mateus Leme",
+      "Ribeirão das Neves",
+      "Ibirité",
+      "Igarapé",
+      "Sarzedo",
+    ],
 
     reviews: [
       {
@@ -249,7 +289,7 @@ export const services: ServiceData[] = [
   {
     slug: "esquadrias-de-aluminio-linha-25",
 
-    title: "Esquadrias de Alumínio Linha 25 em Belo Horizonte",
+    title: "Esquadrias de Alumínio Linha 25",
 
     metaDescription:
       "Esquadrias de Alumínio Linha 25 sob medida em Belo Horizonte com excelente custo-benefício, instalação profissional e acabamento moderno para residências e comércios.",
@@ -292,13 +332,26 @@ export const services: ServiceData[] = [
 
     whatsappMessage:
       "Olá! Gostaria de solicitar um orçamento para esquadrias de alumínio Linha 25.",
-
     cities: [
       "Belo Horizonte",
       "Contagem",
       "Betim",
       "Nova Lima",
+      "Lagoa Santa",
+      "Caeté",
+      "Sabará",
+      "Brumadinho",
+      "Raposos",
+      "Santa Luzia",
+      "Vespasiano0",
+      "Pedro Leopoldo",
+      "Matozinhos",
+      "Confins",
+      "Mateus Leme",
       "Ribeirão das Neves",
+      "Ibirité",
+      "Igarapé",
+      "Sarzedo",
     ],
 
     reviews: [
@@ -392,7 +445,7 @@ export const services: ServiceData[] = [
   {
     slug: "esquadrias-de-aluminio-linha-42",
 
-    title: "Esquadrias de Alumínio Linha 42 em Belo Horizonte",
+    title: "Esquadrias de alumínio Linha 42",
 
     metaDescription:
       "Esquadrias de Alumínio Linha 42 sob medida em Belo Horizonte com alta resistência estrutural, acabamento premium e excelente desempenho para projetos modernos e sofisticados.",
@@ -442,7 +495,20 @@ export const services: ServiceData[] = [
       "Betim",
       "Nova Lima",
       "Lagoa Santa",
+      "Caeté",
+      "Sabará",
       "Brumadinho",
+      "Raposos",
+      "Santa Luzia",
+      "Vespasiano0",
+      "Pedro Leopoldo",
+      "Matozinhos",
+      "Confins",
+      "Mateus Leme",
+      "Ribeirão das Neves",
+      "Ibirité",
+      "Igarapé",
+      "Sarzedo",
     ],
 
     reviews: [
@@ -536,7 +602,7 @@ export const services: ServiceData[] = [
   {
     slug: "porta-acm-sob-medida-em-bh-e-regiao",
 
-    title: "Porta ACM Sob Medida em Belo Horizonte",
+    title: "Porta ACM Sob Medida",
 
     metaDescription:
       "Portas ACM sob medida em Belo Horizonte com acabamento moderno, alta durabilidade e instalação profissional. Projetos sofisticados para residências e comércios.",
@@ -589,7 +655,20 @@ export const services: ServiceData[] = [
       "Betim",
       "Nova Lima",
       "Lagoa Santa",
+      "Caeté",
+      "Sabará",
+      "Brumadinho",
+      "Raposos",
+      "Santa Luzia",
+      "Vespasiano0",
+      "Pedro Leopoldo",
+      "Matozinhos",
+      "Confins",
+      "Mateus Leme",
       "Ribeirão das Neves",
+      "Ibirité",
+      "Igarapé",
+      "Sarzedo",
     ],
 
     reviews: [
@@ -683,7 +762,7 @@ export const services: ServiceData[] = [
   {
     slug: "vidracaria-em-belo-horizonte",
 
-    title: "Vidraçaria em Belo Horizonte | Vidros Temperados e Sob Medida",
+    title: "Vidros Temperados e Sob Medida",
 
     metaDescription:
       "Serviços de vidraçaria em Belo Horizonte com instalação de vidro temperado, box, fachadas, guarda-corpo e projetos sob medida com acabamento profissional.",
@@ -699,17 +778,15 @@ export const services: ServiceData[] = [
       "blindex bh",
     ],
 
-    subtitle:
-      "Projetos em vidro sob medida com acabamento sofisticado, segurança e instalação profissional.",
+    subtitle: "Transforme seu ambiente com blindex moderno e sofisticado.",
 
-    ctaTitle:
-      "Transforme seu ambiente com vidro temperado moderno e sofisticado.",
+    ctaTitle: "Transforme seu ambiente com blindex moderno e sofisticado.",
 
     ctaDescription:
       "Solicite agora seu orçamento para serviços de vidraçaria sob medida e tenha instalação profissional, acabamento premium e excelente durabilidade.",
 
     description:
-      "Trabalhamos com projetos completos de vidraçaria em Belo Horizonte, oferecendo soluções modernas, seguras e sofisticadas para residências e comércios.",
+      "Projetos em vidro temperado e laminado sob medida com acabamento sofisticado, segurança e instalação profissional.",
 
     heroImage: "/images/blindex-bg.webp",
 
@@ -729,16 +806,27 @@ export const services: ServiceData[] = [
 
     whatsappMessage:
       "Olá! Gostaria de solicitar um orçamento para serviços de vidraçaria.",
-
     cities: [
       "Belo Horizonte",
       "Contagem",
       "Betim",
       "Nova Lima",
       "Lagoa Santa",
+      "Caeté",
+      "Sabará",
+      "Brumadinho",
+      "Raposos",
+      "Santa Luzia",
+      "Vespasiano0",
+      "Pedro Leopoldo",
+      "Matozinhos",
+      "Confins",
+      "Mateus Leme",
       "Ribeirão das Neves",
+      "Ibirité",
+      "Igarapé",
+      "Sarzedo",
     ],
-
     reviews: [
       {
         name: "Marcelo Andrade",

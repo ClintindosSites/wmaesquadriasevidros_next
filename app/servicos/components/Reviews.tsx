@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 interface Review {
   name: string;
   text: string;
@@ -44,13 +42,13 @@ export default function Reviews({ service }: { service: Service }) {
             );
           })}
         </div>
-        <Link
+        <a
           href={"https://share.google/ApnB9Rps7zf48NLTW"}
           className="cta-button"
           target="_blank"
         >
           Fazer avaliação no Google{" "}
-        </Link>
+        </a>
       </div>
     </section>
   );

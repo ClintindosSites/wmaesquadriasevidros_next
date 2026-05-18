@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-
 import { event } from "@/lib/gtag";
 
 export default function ServiceHero({ service }: any) {
@@ -29,7 +27,7 @@ export default function ServiceHero({ service }: any) {
 
         <p>{service.description}</p>
 
-        <Link
+        <a
           href={`https://wa.me/5531982112125?text=${whatsappMessage}`}
           className="cta-button"
           target="_blank"
@@ -43,7 +41,7 @@ export default function ServiceHero({ service }: any) {
           }
         >
           Solicitar Orçamento no WhatsApp
-        </Link>
+        </a>
       </div>
     </section>
   );

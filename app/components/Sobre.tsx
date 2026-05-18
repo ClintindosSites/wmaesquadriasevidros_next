@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 
 import { event } from "@/lib/gtag";
 
@@ -46,7 +45,7 @@ export default function Sobre() {
             <div>✔ Compromisso com prazo e acabamento</div>
           </div>
 
-          <Link
+          <a
             href={`https://wa.me/5531998212125?text=${whatsappMessage}`}
             target="_blank"
             className="saiba-mais"
@@ -60,7 +59,7 @@ export default function Sobre() {
             }
           >
             Solicitar orçamento pelo WhatsApp
-          </Link>
+          </a>
         </div>
 
         {/* IMAGEM */}

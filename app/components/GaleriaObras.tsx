@@ -60,7 +60,7 @@ export default function GaleriaObras() {
           <div className="galeria-item">
             <Image
               src={imagens[1]}
-              alt="Projeto de esquadrias e vidros da WMA"
+              alt="Projeto de esquadrias e vidros e porta ACM da WMA"
               width={400}
               height={400}
             />
@@ -69,7 +69,7 @@ export default function GaleriaObras() {
           <div className="galeria-item">
             <Image
               src={imagens[2]}
-              alt="Projeto de esquadrias e vidros da WMA"
+              alt="Projeto de esquadrias e vidros e porta ACM da WMA"
               width={400}
               height={400}
             />
@@ -78,7 +78,7 @@ export default function GaleriaObras() {
           <div className="galeria-item">
             <Image
               src={imagens[3]}
-              alt="Projeto de esquadrias e vidros da WMA"
+              alt="Projeto de esquadrias e vidros e porta ACM da WMA"
               width={400}
               height={400}
             />
@@ -143,7 +143,7 @@ export default function GaleriaObras() {
           <div className="galeria-item">
             <Image
               src={imagens[14]}
-              alt="Projeto de esquadrias e vidros da WMA"
+              alt="Porta de ACM"
               width={400}
               height={400}
             />
@@ -151,7 +151,7 @@ export default function GaleriaObras() {
           <div className="galeria-item">
             <Image
               src={imagens[15]}
-              alt="Projeto de esquadrias e vidros da WMA"
+              alt="Porta de ACM"
               width={400}
               height={400}
             />
@@ -159,7 +159,7 @@ export default function GaleriaObras() {
           <div className="galeria-item">
             <Image
               src={imagens[16]}
-              alt="Projeto de esquadrias e vidros da WMA"
+              alt="Porta de esquadria de alumínio"
               width={400}
               height={400}
             />
@@ -167,7 +167,7 @@ export default function GaleriaObras() {
           <div className="galeria-item">
             <Image
               src={imagens[17]}
-              alt="Projeto de esquadrias e vidros da WMA"
+              alt="Porta de ACM com acabamento estribado "
               width={400}
               height={400}
             />
@@ -175,7 +175,7 @@ export default function GaleriaObras() {
           <div className="galeria-item">
             <Image
               src={imagens[18]}
-              alt="Projeto de esquadrias e vidros da WMA"
+              alt="Porta de ACM com acabamento estribado "
               width={400}
               height={400}
             />
@@ -183,7 +183,7 @@ export default function GaleriaObras() {
           <div className="galeria-item">
             <Image
               src={imagens[19]}
-              alt="Projeto de esquadrias e vidros da WMA"
+              alt="Porta ACM Preta com acabamenteo de qualidade"
               width={400}
               height={400}
             />

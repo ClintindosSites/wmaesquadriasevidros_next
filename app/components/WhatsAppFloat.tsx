@@ -10,7 +10,7 @@ export default function WhatsappFloat() {
   );
 
   return (
-    <Link
+    <a
       href={`https://wa.me/5531982112125?text=${whatsappMessage}`}
       target="_blank"
       rel="noopener noreferrer"
@@ -30,6 +30,6 @@ export default function WhatsappFloat() {
         height={100}
         alt="Botão do Whatsapp de WMA Esquadrias e Vidros"
       />
-    </Link>
+    </a>
   );
 }

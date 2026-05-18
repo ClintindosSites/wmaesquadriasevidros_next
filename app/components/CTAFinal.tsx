@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+
 import OrcamentoForm from "./OrcamentoForm";
 import { event } from "@/lib/gtag";
 
@@ -13,7 +13,7 @@ export default function CTAFinal({ service }: CTAFinalProps) {
   const title = service?.title || "Esquadrias de Alumínio";
 
   const whatsappMessage = encodeURIComponent(
-    "Olá, vim pelo site e gostaria de um orçamento de esquadrias de alumínio"
+    "Olá, gostaria de fazer um orçamento..."
   );
 
   return (
@@ -30,7 +30,7 @@ export default function CTAFinal({ service }: CTAFinalProps) {
             e esquadrias de alumínio sob medida em Belo Horizonte e região.
           </p>
 
-          <Link
+          <a
             href={`https://wa.me/5531982112125?text=${whatsappMessage}`}
             target="_blank"
             className="cta-button"
@@ -43,7 +43,7 @@ export default function CTAFinal({ service }: CTAFinalProps) {
             }
           >
             Solicitar orçamento pelo Whatsapp
-          </Link>
+          </a>
         </div>
 
         <div className="cta-form">

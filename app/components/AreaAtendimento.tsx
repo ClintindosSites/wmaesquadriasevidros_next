@@ -6,7 +6,7 @@ import { event } from "@/lib/gtag";
 
 export default function AreaAtendimento() {
   const whatsappMessage = encodeURIComponent(
-    "Olá! Vim pelo site e gostaria de solicitar um orçamento para esquadrias de alumínio."
+    "Olá! Gostaria de fazer um orçamento..."
   );
 
   return (
@@ -60,7 +60,7 @@ export default function AreaAtendimento() {
 
           {/* CTA */}
           <div className="area-buttons">
-            <Link
+            <a
               href={`https://wa.me/5531982112125?text=${whatsappMessage}`}
               target="_blank"
               className="cta-button"
@@ -74,7 +74,7 @@ export default function AreaAtendimento() {
               }
             >
               Solicitar orçamento pelo Whatsapp
-            </Link>
+            </a>
 
             <Link
               href="https://maps.app.goo.gl/wzARj1abwbv4SCRF7"

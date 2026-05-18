@@ -41,7 +41,7 @@ export default function Servicos() {
       name: "Vidraçaria Blindex",
       description:
         "Projetos em vidro temperado para fachadas, boxes, sacadas e ambientes sofisticados com segurança e elegância.",
-      image: "/images/blindex-bg.webp",
+      image: "/images/vidro-temperado-laminado.webp",
       link: "/servicos/vidracaria-em-belo-horizonte",
     },
   ];

@@ -53,7 +53,7 @@ export default function ServicoCard({
         </Link>
 
         {/* WHATSAPP */}
-        <Link
+        <a
           href={`https://wa.me/5531982112125?text=${whatsappMessage}`}
           target="_blank"
           className="cta-button"
@@ -66,7 +66,7 @@ export default function ServicoCard({
           }
         >
           Solicitar Orçamento pelo WhatsApp
-        </Link>
+        </a>
       </div>
     </div>
   );

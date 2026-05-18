@@ -57,13 +57,9 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/vidracaria">Vidraçaria</Link>
-            </li>
-            <li>
-              <Link href="/">Fachadas de vidro</Link>
-            </li>
-            <li>
-              <Link href="/">Projetos personalizados</Link>
+              <Link href="/servicos/vidracaria-em-belo-horizonte">
+                Vidraçaria
+              </Link>
             </li>
           </ul>
         </div>

@@ -369,9 +369,7 @@ h3 {
 
   transition: 0.3s;
 }
-.cta-button:hover {
-  transform: translateY(-2px);
-}
+
 .cta-button {
   position: relative;
   width: fit-content;
@@ -455,14 +453,10 @@ h3 {
 .servicos-card .cta-button:hover {
   background-color: #fff;
   color: #0b2b4c;
-  line-height: 1.5;
 }
 
 .servicos-card p {
   color: 1.5rem;
-}
-.servicos-card:hover {
-  transform: translateY(-5px);
 }
 
 .servico-img {
@@ -512,12 +506,9 @@ h3 {
   text-transform: uppercase;
   text-align: center;
   width: 100%;
+  cursor: pointer;
 }
-.cta-button:hover,
-.saiba-mais:hover {
-  transition: 0.5s;
-  transform: scale(1.05);
-}
+
 .sobre {
   padding: 120px 0;
   background: var(--primary);
@@ -993,7 +984,9 @@ textarea {
   align-items: center;
   gap: 1.3rem;
 }
-
+.cta-form button {
+  cursor: pointer;
+}
 @media (max-width: 992px) {
   .header-nav {
     display: none;
@@ -1274,10 +1267,6 @@ textarea {
   fill: white;
 }
 
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  animation: none;
-}
 @keyframes pulse {
   0% {
     transform: scale(1);

@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-
 import { event } from "@/lib/gtag";
 
 export default function ServiceBenefits({ service }: any) {
@@ -49,7 +47,7 @@ export default function ServiceBenefits({ service }: any) {
         </div>
 
         {/* CTA */}
-        <Link
+        <a
           href={`https://wa.me/5531982112125?text=${whatsappMessage}`}
           className="cta-button"
           target="_blank"
@@ -63,7 +61,7 @@ export default function ServiceBenefits({ service }: any) {
           }
         >
           Solicitar Orçamento no WhatsApp
-        </Link>
+        </a>
       </div>
     </section>
   );

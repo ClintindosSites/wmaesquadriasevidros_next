@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+
 import OrcamentoForm from "./OrcamentoForm";
 import { event } from "@/lib/gtag";
 
@@ -12,10 +12,8 @@ interface HeroProps {
 export default function Hero({ service }: HeroProps) {
   const title = service?.title || "Esquadrias de Alumínio";
 
-  const whatsappMessage = encodeURIComponent(
-    "Olá, vim pelo site e gostaria de um orçamento de esquadrias de alumínio"
-  );
-
+  const whatsappMessage =
+    "Olá, vim pelo site e gostaria de um orçamento de esquadrias de alumínio";
   return (
     <section className="hero">
       <div className="container">
@@ -39,20 +37,23 @@ export default function Hero({ service }: HeroProps) {
             <span>Instalação com acabamento profissional</span>
           </div>
 
-          <Link
-            href={`https://wa.me/5531982112125?text=${whatsappMessage}`}
+          <a
+            href={`https://wa.me/5531982112125?text=${encodeURIComponent(
+              whatsappMessage
+            )}`}
             target="_blank"
+            rel="noopener noreferrer"
             className="cta-button"
-            onClick={() =>
+            onClick={() => {
               event({
                 action: "click_whatsapp",
                 category: "Contato",
                 label: title,
-              })
-            }
+              });
+            }}
           >
             Receba seu orçamento rápido no WhatsApp
-          </Link>
+          </a>
         </div>
 
         <div className="cta-form">
