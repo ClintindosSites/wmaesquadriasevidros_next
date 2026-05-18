@@ -10,7 +10,6 @@ const imagens = [
   "/images/obra-2.webp",
   "/images/obra-3.webp",
   "/images/obra-4.webp",
-  "/images/porta-amc-esquadria-1.webp",
   "/images/portas-janelas-de-aluminio.webp",
   "/images/vidro-temperado-laminado.webp",
   "/images/pergolado-1.webp",
@@ -20,26 +19,13 @@ const imagens = [
   "/images/pergolado-6.webp",
   "/images/pergolado-7.webp",
   "/images/pergolado-8.webp",
-  "/images/pergolado-9.webp",
-  "/images/pergolado-10.webp",
-  "/images/pergolado-11.webp",
-  "/images/pergolado-12.webp",
-  "/images/pergolado-13.webp",
-  "/images/pergolado-14.webp",
-  "/images/pergolado-15.webp",
-  "/images/pergolado-16.webp",
-  "/images/pergolado-17.webp",
-  "/images/pergolado-18.webp",
-  "/images/pergolado-19.webp",
-  "/images/pergolado-20.webp",
-  "/images/pergolado-21.webp",
-  "/images/pergolado-22.webp",
-  "/images/pergolado-23.webp",
-  "/images/pergolado-24.webp",
-  "/images/pergolado-25.webp",
-  "/images/pergolado-26.webp",
-  "/images/pergolado-27.webp",
-  "/images/pergolado-28.webp",
+  "/images/porta-acm-1.webp",
+  "/images/porta-acm-3.webp",
+  "/images/porta-acm-4.webp",
+  "/images/porta-acm-5.webp",
+  "/images/porta-acm-6.webp",
+  "/images/porta-acm-7.webp",
+  "/images/porta-acm-8.webp",
 ];
 
 export default function GaleriaObras() {
@@ -100,7 +86,103 @@ export default function GaleriaObras() {
 
           <div className="galeria-item">
             <Image
-              src={imagens[4]}
+              src={imagens[7]}
+              alt="Projeto de esquadrias e vidros da WMA"
+              width={400}
+              height={400}
+            />
+          </div>
+          <div className="galeria-item">
+            <Image
+              src={imagens[8]}
+              alt="Projeto de esquadrias e vidros da WMA"
+              width={400}
+              height={400}
+            />
+          </div>
+          <div className="galeria-item">
+            <Image
+              src={imagens[9]}
+              alt="Projeto de esquadrias e vidros da WMA"
+              width={800}
+              height={400}
+            />
+          </div>
+          <div className="galeria-item">
+            <Image
+              src={imagens[10]}
+              alt="Projeto de esquadrias e vidros da WMA"
+              width={400}
+              height={400}
+            />
+          </div>
+          <div className="galeria-item">
+            <Image
+              src={imagens[11]}
+              alt="Projeto de esquadrias e vidros da WMA"
+              width={400}
+              height={400}
+            />
+          </div>
+          <div className="galeria-item">
+            <Image
+              src={imagens[12]}
+              alt="Projeto de esquadrias e vidros da WMA"
+              width={400}
+              height={400}
+            />
+          </div>
+          <div className="galeria-item">
+            <Image
+              src={imagens[13]}
+              alt="Projeto de esquadrias e vidros da WMA"
+              width={800}
+              height={400}
+            />
+          </div>
+          <div className="galeria-item">
+            <Image
+              src={imagens[14]}
+              alt="Projeto de esquadrias e vidros da WMA"
+              width={400}
+              height={400}
+            />
+          </div>
+          <div className="galeria-item">
+            <Image
+              src={imagens[15]}
+              alt="Projeto de esquadrias e vidros da WMA"
+              width={400}
+              height={400}
+            />
+          </div>
+          <div className="galeria-item">
+            <Image
+              src={imagens[16]}
+              alt="Projeto de esquadrias e vidros da WMA"
+              width={400}
+              height={400}
+            />
+          </div>
+          <div className="galeria-item">
+            <Image
+              src={imagens[17]}
+              alt="Projeto de esquadrias e vidros da WMA"
+              width={400}
+              height={400}
+            />
+          </div>
+          <div className="galeria-item">
+            <Image
+              src={imagens[18]}
+              alt="Projeto de esquadrias e vidros da WMA"
+              width={400}
+              height={400}
+            />
+          </div>
+          <div className="galeria-item">
+            <Image
+              src={imagens[19]}
               alt="Projeto de esquadrias e vidros da WMA"
               width={400}
               height={400}
